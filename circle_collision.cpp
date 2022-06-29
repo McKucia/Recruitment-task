@@ -2,9 +2,11 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(600, 1000), "Circle collision");
+    sf::CircleShape circle(100.f);
+	sf::RectangleShape rectangle(sf::Vector2f(50, 100));
+
+    circle.setFillColor(sf::Color::Red);
 
     while (window.isOpen())
     {
@@ -16,7 +18,8 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        window.draw(circle);
+		window.draw(rectangle);
         window.display();
     }
 
