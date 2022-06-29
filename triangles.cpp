@@ -19,19 +19,6 @@ struct triangle {
 	std::array<vec2, 3> points;
 };
 
-// bool inTriangle(const triangle& triangle, const vec2& point) {
-
-// 	auto p1 = triangle.points[0], p2 = triangle.points[1], p3 = triangle.points[2];
-
-//     float AB = (point.y - p1.y)*(p2.x - p1.x)  -  (point.x - p1.x)*(p2.y - p1.y);
-//     float CA = (point.y - p3.y)*(p1.x - p3.x)  -  (point.x - p3.x)*(p1.y - p3.y);
-//     float BC = (point.y - p2.y)*(p3.x - p2.x)  -  (point.x - p2.x)*(p3.y - p2.y);
-
-//     if (AB * BC > 0.f && BC * CA > 0.f)
-//         return true;
-//     return false;    
-// }
-
 bool isColliding(triangle& triangle1, triangle& triangle2 ) {
 	triangle *t1 = &triangle1;
 	triangle *t2 = &triangle2;
